@@ -13,7 +13,7 @@ Integrantes:
 
 - Augusto Modesto
 
-- Cristiano 
+- Cristiano Ferreira
 
 - Verônica Mendonça
 
