@@ -1,12 +1,14 @@
 package Model;
 
 public abstract class Pessoa {
-    private String nome;
+    
+	private String nome;
     private String dataNascimento;
     private String cpf;
     private String endereco;
     private String cidade;
     private String email;
+    private Telefone[] telefones;
 
     //Getters e Setters
     public String getNome() {
@@ -56,5 +58,13 @@ public abstract class Pessoa {
     public void setEmail(String email) {
         this.email = email;
     }
+
+	public Telefone[] getTelefones() {
+		return telefones;
+	}
+
+	public void setTelefones(Telefone[] telefones) {
+		this.telefones = telefones;
+	}
 
 }

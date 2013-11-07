@@ -1,9 +1,11 @@
 package Model;
 
-public class Paciente {
-    private String codigoIdenticador;
-    private int idade;
+public class Paciente extends Pessoa{
+    
+	private String codigoIdenticador;
     private String urlFoto;
+    private Atendimento atendimento;
+    private Prontuario prontuario;
 
     //Getters e Setters
 
@@ -15,14 +17,6 @@ public class Paciente {
         this.codigoIdenticador = codigoIdenticador;
     }
 
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
     public String getUrlFoto() {
         return urlFoto;
     }
@@ -30,5 +24,21 @@ public class Paciente {
     public void setUrlFoto(String urlFoto) {
         this.urlFoto = urlFoto;
     }
+
+	public Atendimento getAtendimento() {
+		return atendimento;
+	}
+
+	public void setAtendimento(Atendimento atendimento) {
+		this.atendimento = atendimento;
+	}
+
+	public Prontuario getProntuario() {
+		return prontuario;
+	}
+
+	public void setProntuario(Prontuario prontuario) {
+		this.prontuario = prontuario;
+	}
 
 }

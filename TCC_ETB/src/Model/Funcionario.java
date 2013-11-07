@@ -1,6 +1,6 @@
 package Model;
 
-public class Funcionario {
+public class Funcionario extends Pessoa {
 
     private String codigoMatricula;
     private String especializacao;
@@ -22,25 +22,5 @@ public class Funcionario {
         this.especializacao = especializacao;
     }
 
-    //Metodos especialistas
-    public void incluir(){
-      
-    }
-
-    public void alterar() {
-
-    }
-
-    public void excluir() {
-
-    }
-
-    public void detalhar() {
-
-    }
-
-    public void pesquisar(){
-
-    }
 
 }

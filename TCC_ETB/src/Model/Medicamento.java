@@ -1,9 +1,11 @@
 package Model;
 
 public class Medicamento {
-    private String codigoMedicamento;
+    
+	private String codigoMedicamento;
     private String nome;
     private String descricao;
+    private Prontuario[] prontuarios;
 
     //Getters e Setters
 
@@ -30,5 +32,14 @@ public class Medicamento {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+    
+    public Prontuario[] getProntuarios() {
+		return prontuarios;
+	}
+
+	public void setProntuarios(Prontuario[] prontuarios) {
+		this.prontuarios = prontuarios;
+	}
+    
 
 }

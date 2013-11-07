@@ -1,9 +1,10 @@
 package Model;
 
-public class EspecialistaClinico {
+public class EspecialistaClinico extends Funcionario{
 
     private String salaAtendimento;
     private String area;
+    private Atendimento[] atendimentos;
 
     //Getters e Setters
 
@@ -22,6 +23,14 @@ public class EspecialistaClinico {
     public void setArea(String area) {
         this.area = area;
     }
+
+	public Atendimento[] getAtendimentos() {
+		return atendimentos;
+	}
+
+	public void setAtendimentos(Atendimento[] atendimentos) {
+		this.atendimentos = atendimentos;
+	}
 
  
      

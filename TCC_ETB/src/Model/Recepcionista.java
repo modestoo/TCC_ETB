@@ -1,8 +1,9 @@
 package Model;
 
-public class Recepcionista {
+public class Recepcionista extends Funcionario{
 
     private String ramal;
+    private Atendimento[] atendimentos;
 
     //Getters e Setters
 
@@ -13,5 +14,13 @@ public class Recepcionista {
     public void setRamal(String ramal) {
         this.ramal = ramal;
     }
+
+	public Atendimento[] getAtendimentos() {
+		return atendimentos;
+	}
+
+	public void setAtendimentos(Atendimento[] atendimentos) {
+		this.atendimentos = atendimentos;
+	}
 
 }

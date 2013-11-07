@@ -1,19 +1,20 @@
 package Model;
 
-public class ResponsavelLegal {
-    private String codigoIdentidade;
+public class ResponsavelLegal extends Pessoa{
+    
+	private String codigoIdentificador;
     private String descricao;
-    //String login;
-    //String senha;
+    private PacienteInternado pacienteInternado;
+
 
     //Getters e Setters
 
-    public String getCodigoIdentidade() {
-        return codigoIdentidade;
+    public String getCodigoIdentificador() {
+        return codigoIdentificador;
     }
 
-    public void setCodigoIdentidade(String codigoIdentidade) {
-        this.codigoIdentidade = codigoIdentidade;
+    public void setCodigoIdentificador(String codigoIdentificador) {
+        this.codigoIdentificador = codigoIdentificador;
     }
 
     public String getDescricao() {
@@ -23,5 +24,15 @@ public class ResponsavelLegal {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+	public PacienteInternado getPacienteInternado() {
+		return pacienteInternado;
+	}
+
+	public void setPacienteInternado(PacienteInternado pacienteInternado) {
+		this.pacienteInternado = pacienteInternado;
+	}
+    
+    
 
 }

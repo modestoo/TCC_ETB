@@ -4,6 +4,7 @@ public class RelatorioDeAtividade {
 
     private String codigoRelatorio;
     private String Relatorio;
+    private TecnicoClinico tecnicoClinico;
 
     //Getters e Setters
 
@@ -22,6 +23,15 @@ public class RelatorioDeAtividade {
     public void setRelatorio(String Relatorio) {
         this.Relatorio = Relatorio;
     }
+
+	public TecnicoClinico getTecnicoClinico() {
+		return tecnicoClinico;
+	}
+
+	public void setTecnicoClinico(TecnicoClinico tecnicoClinico) {
+		this.tecnicoClinico = tecnicoClinico;
+	}
+    
     
 
 }
