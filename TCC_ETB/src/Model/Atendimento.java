@@ -2,6 +2,8 @@ package Model;
 
 public class Atendimento {
 
+	private String nome;
+	private String telefone;
 	private String horario;
     private String codigoAtendimento;
     private String dataAtendimento;
@@ -12,10 +14,25 @@ public class Atendimento {
 
     //Getters e Setters
 
-    public String getHorario() {
-		return horario;
+	public String getNome() {
+		return nome;
 	}
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	
+	public String getHorario() {
+		return horario;
+	}
 	public void setHorario(String horario) {
 		this.horario = horario;
 	}

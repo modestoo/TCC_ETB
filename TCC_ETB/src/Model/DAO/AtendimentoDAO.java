@@ -13,21 +13,25 @@ public class AtendimentoDAO extends DataBaseDAO {
 
 	public void inserir(Atendimento a) throws Exception {
         PreparedStatement pst;
-        String sql = "INSERT INTO atendimento (codAtendimento, dataAtendimento, horario) VALUES(?,?,?)";
+        String sql = "INSERT INTO atendimento (codAtendimento, nome, telefone, dataAtendimento, horario) VALUES(?,?,?,?,?)";
         pst = conn.prepareStatement(sql);
         pst.setString(1, a.getCodigoAtendimento());
-        pst.setString(2, a.getDataAtendimento());
-        pst.setString(3, a.getHorario());
+        pst.setString(2, a.getNome());
+        pst.setString(3, a.getTelefone());
+        pst.setString(4, a.getDataAtendimento());
+        pst.setString(5, a.getHorario());
         pst.execute();
     }
     
     public void alterar(Atendimento a) throws Exception {
         PreparedStatement pst;
-        String sql = "UPDATE atendimento SET dataAtendimento=?, horario=? WHERE codAtendimento=?";
+        String sql = "UPDATE atendimento SET nome=?, telefone=?, dataAtendimento=?, horario=? WHERE codAtendimento=?";
         pst = conn.prepareStatement(sql);
-        pst.setString(1, a.getDataAtendimento());
-        pst.setString(2, a.getHorario());
-        pst.setString(3, a.getCodigoAtendimento());
+        pst.setString(1, a.getNome());
+        pst.setString(2, a.getTelefone());
+        pst.setString(3, a.getDataAtendimento());
+        pst.setString(4, a.getHorario());
+        pst.setString(5, a.getCodigoAtendimento());
         pst.execute();
     }
 
@@ -49,6 +53,8 @@ public class AtendimentoDAO extends DataBaseDAO {
         while (rs.next()) {
         	Atendimento a = new Atendimento();
             a.setCodigoAtendimento(rs.getString("codAtendimento"));
+            a.setNome(rs.getString("nome"));
+            a.setTelefone(rs.getString("telefone"));
             a.setDataAtendimento(rs.getString("dataAtendimento"));
             a.setHorario(rs.getString("horario"));
             
